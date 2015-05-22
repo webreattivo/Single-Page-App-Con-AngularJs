@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h1>App Rubrica con Angular</h1>
+    </div>
+    <div class="col-lg-6" style="margin-top: 25px;">
+        <a href="/#/" class="btn btn-success pull-right">Torna Indietro</a>
+    </div>
+</div>
+<hr>
+<div class="alert alert-danger" ng-hide="hideNoDeleteMessage">Qualcosa è andato storto durante l'eliminazione.</div>
+
+<h4>Sei sicuro di voler eliminare {{contact.name}}?</h4>
+
+<button class="btn btn-danger" ng-click="deleteContact(contact._id)">Elimina</button>

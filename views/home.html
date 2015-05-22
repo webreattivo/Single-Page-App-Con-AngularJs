@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h1>App Rubrica con Angular</h1>
+    </div>
+    <div class="col-lg-6" style="margin-top: 25px;">
+        <a href="/#/add" class="btn btn-success pull-right">Aggiungi Contatto</a>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="alert alert-danger" ng-hide="hideNoresultMessage">Problemi nel recuperare i dati dalla API</div>
+
+        <ul class="list-group" ng-repeat="contact in listContacts">
+            <li class="list-group-item">
+                <strong>Contatto:</strong> {{contact.name}} {{contact.surname}}<br />
+                <strong>Telefono:</strong> {{contact.phone}}<br /><br />
+                <div class="btn-group" role="group">
+                    <a href="/#/edit/{{contact._id}}" class="btn btn-default">Modifica</a>
+                    <a href="/#/delete/{{contact._id}}" class="btn btn-default">Elimina</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

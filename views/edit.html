@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h1>App Rubrica con Angular</h1>
+    </div>
+    <div class="col-lg-6" style="margin-top: 25px;">
+        <a href="/#/" class="btn btn-success pull-right">Torna Indietro</a>
+    </div>
+</div>
+<hr>
+<h4>Modifica contatto</h4>
+
+<div class="alert alert-danger" ng-hide="hideNoSaveMessage">Qualcosa è andato storto durante il salvtaggio.</div>
+
+<form ng-submit="editContact()">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" ng-model="contact.name" placeholder="Nome">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="surname">Cognome</label>
+                <input type="text" class="form-control" id="surname" ng-model="contact.surname" placeholder="Cognome">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="phone">Telefono</label>
+                <input type="text" class="form-control" id="phone" ng-model="contact.phone" placeholder="Telefono">
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Salva</button>
+</form>
